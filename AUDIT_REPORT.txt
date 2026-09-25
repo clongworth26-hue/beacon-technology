@@ -1,0 +1,24 @@
+BEACON TECHNOLOGY — WEBSITE AUDIT & UPDATE
+==============================================
+
+REFERENCE:
+The supplied design screenshot IMG_9244.jpeg was used as the visual reference.
+
+WHAT WAS DIFFERENT
+1. The prior hero was structurally similar but did not match the reference proportions and visual treatment.
+2. The prior solution section was too card-heavy; the reference uses a clean white four-column strip with vertical dividers.
+3. The stats section needed the darker mountain-backed band and the intro block on the left.
+4. The “Beacon Advantage” section needed the photo-left / white-content-right split.
+5. The reference includes a prominent mobile-phone product treatment; the update adds a dedicated phone UI.
+6. The navigation spacing, typography scale, CTA treatment, and section rhythm were tightened to match the supplied design.
+7. Branding is now loaded from actual files in the assets folder instead of being recreated entirely with CSS.
+
+UPDATED STRUCTURE
+Header → Hero → AI Solutions → Stats / Social Proof → Beacon Advantage → Platform + Mobile UI → Contact CTA → Footer
+
+ASSETS
+All website graphics are stored under /assets and referenced with relative paths, so the package can be uploaded as a complete folder.
+
+IMPORTANT
+The figures 200+, 98%, and 3× remain design placeholders. Replace them with verified Beacon Technology metrics before public launch.
+The email address is also a placeholder until the final business contact address is confirmed.

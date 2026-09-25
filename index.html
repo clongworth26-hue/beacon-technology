@@ -1,112 +1,217 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Beacon Technology — AI Business Solutions</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Beacon Technology | AI Business Solutions</title>
 <meta name="description" content="Beacon Technology — Smarter Tools. Stronger Businesses. Powered by AI.">
 <style>
 :root{
-  --navy:#051227; --navy2:#081c3a; --blue:#0096ff; --cyan:#1fd3ff;
-  --white:#f8fafc; --muted:#aebccd; --line:rgba(31,211,255,.20);
+  --navy:#031126; --navy2:#061b38; --blue:#079cf2; --cyan:#23d7ff;
+  --ink:#09203d; --muted:#6d7e93; --white:#fff; --soft:#f5f9fd;
+  --line:rgba(20,78,130,.16); --shadow:0 24px 60px rgba(3,17,38,.16);
 }
-*{box-sizing:border-box} html{scroll-behavior:smooth}
-body{margin:0;background:var(--navy);color:var(--white);font-family:Inter,Montserrat,Arial,sans-serif;line-height:1.5}
-a{color:inherit;text-decoration:none}.container{width:min(1180px,92%);margin:auto}
-nav{position:sticky;top:0;z-index:10;background:rgba(5,18,39,.88);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
-.nav{height:76px;display:flex;align-items:center;justify-content:space-between}
-.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.05em}
-.mark{width:42px;height:42px;border-radius:10px;background:linear-gradient(145deg,#071a35,#0b315f);display:grid;place-items:center;border:1px solid rgba(31,211,255,.35)}
-.mark svg{width:31px;height:31px}.brand small{display:block;color:var(--cyan);font-size:9px;letter-spacing:.22em}
-.links{display:flex;gap:30px;color:#dbe6f2;font-size:14px}.links a:hover{color:var(--cyan)}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 20px;border-radius:9px;background:linear-gradient(90deg,var(--blue),var(--cyan));color:#001124;font-weight:800;border:0}
-.btn.secondary{background:transparent;color:var(--white);border:1px solid var(--blue)}
-.hero{min-height:650px;display:grid;grid-template-columns:1fr 1.1fr;align-items:center;gap:35px;background:
-radial-gradient(circle at 78% 45%,rgba(0,150,255,.18),transparent 35%),
-linear-gradient(135deg,#041126,#071c3d 60%,#041126)}
-.eyebrow{color:var(--cyan);font-weight:800;letter-spacing:.22em;font-size:12px}
-h1{font-size:clamp(45px,6vw,76px);line-height:.98;margin:16px 0 22px;letter-spacing:-.045em}
-h1 span{color:var(--cyan)}.lead{font-size:17px;color:#c5d1df;max-width:560px}
-.actions{display:flex;gap:14px;margin-top:28px;flex-wrap:wrap}
-.visual{position:relative;height:500px;overflow:hidden;border-radius:24px;border:1px solid var(--line);
-background:linear-gradient(145deg,rgba(0,150,255,.10),rgba(255,255,255,.02));
-box-shadow:0 30px 90px rgba(0,0,0,.35)}
-.grid{position:absolute;inset:0;background-image:linear-gradient(rgba(31,211,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(31,211,255,.07) 1px,transparent 1px);background-size:38px 38px}
-.beam{position:absolute;width:75%;height:170px;right:-5%;top:145px;background:linear-gradient(90deg,transparent,rgba(31,211,255,.35));clip-path:polygon(0 43%,100% 0,100% 100%);filter:blur(1px)}
-.orb{position:absolute;right:25%;top:185px;width:150px;height:150px;border-radius:50%;background:radial-gradient(circle,#fff 0 2%,#1fd3ff 5%,rgba(0,150,255,.4) 28%,transparent 70%);box-shadow:0 0 90px rgba(31,211,255,.8)}
-.panel{position:absolute;left:30px;bottom:28px;width:62%;padding:22px;border-radius:15px;background:rgba(4,16,35,.82);border:1px solid var(--line);backdrop-filter:blur(12px)}
-.panel strong{font-size:19px}.mini{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:15px}.mini div{padding:10px;border-radius:8px;background:#0b2448;font-size:11px;color:#a9c0d8}.mini b{display:block;color:var(--cyan);font-size:18px}
-section{padding:95px 0}.section-head{max-width:720px;margin-bottom:42px}.section-head h2{font-size:42px;line-height:1.05;margin:10px 0}.section-head p{color:var(--muted)}
-.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.card{background:linear-gradient(145deg,#0a2449,#071832);border:1px solid var(--line);border-radius:16px;padding:26px;min-height:230px}.icon{width:48px;height:48px;border-radius:12px;background:#0c355e;color:var(--cyan);display:grid;place-items:center;font-size:22px;margin-bottom:22px}.card h3{margin:0 0 8px;font-size:18px}.card p{margin:0;color:var(--muted);font-size:14px}
-.stats{background:#06152c;border-block:1px solid var(--line)}.statgrid{display:grid;grid-template-columns:repeat(3,1fr);text-align:center}.stat{padding:40px;border-right:1px solid var(--line)}.stat:last-child{border:0}.stat b{font-size:48px;color:var(--cyan);display:block}.stat span{color:var(--muted);font-size:13px}
-.dashboard{display:grid;grid-template-columns:1.1fr .9fr;gap:20px}.dash,.phone{background:#071832;border:1px solid var(--line);border-radius:20px;padding:25px}.dash h3,.phone h3{margin-top:0}.chart{height:210px;border-radius:12px;background:linear-gradient(180deg,rgba(0,150,255,.14),transparent);position:relative;overflow:hidden}.chart:after{content:"";position:absolute;inset:40px 20px 25px;background:linear-gradient(150deg,transparent 15%,rgba(31,211,255,.8) 16%,transparent 17%,transparent 34%,rgba(0,150,255,.9) 35%,transparent 36%,transparent 55%,rgba(31,211,255,.8) 56%,transparent 57%);opacity:.8}
-.phone{max-width:390px;margin:auto;background:linear-gradient(180deg,#06162f,#020b19)}.phone-screen{border-radius:16px;background:#081f41;padding:22px;min-height:390px}.phone .btn{width:100%;justify-content:center;margin-top:15px}.app-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}.app-row div{padding:14px;background:#0b2b53;border-radius:10px;color:#dce9f7;font-size:12px}
-.cta{background:radial-gradient(circle at 80% 20%,rgba(31,211,255,.18),transparent 30%),#071a35;border:1px solid var(--line);border-radius:24px;padding:60px;display:flex;align-items:center;justify-content:space-between;gap:30px}.cta h2{font-size:40px;line-height:1.05;margin:0 0 12px}.cta p{color:var(--muted);margin:0}
-footer{padding:45px 0;color:#93a8bd;border-top:1px solid var(--line);margin-top:80px;font-size:13px}.footer{display:flex;justify-content:space-between;gap:20px}
-@media(max-width:900px){.links{display:none}.hero,.dashboard{grid-template-columns:1fr}.hero{padding:70px 0}.visual{height:420px}.cards{grid-template-columns:1fr 1fr}.statgrid{grid-template-columns:1fr}.stat{border-right:0;border-bottom:1px solid var(--line)}.cta{padding:35px;display:block}.cta .btn{margin-top:25px}}
-@media(max-width:560px){
-  .brand img{max-width:185px!important}
-h1{font-size:48px}.cards{grid-template-columns:1fr}.visual{height:360px}.panel{width:82%;left:18px}.mini{grid-template-columns:1fr}.mini div:nth-child(n+2){display:none}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);background:#fff;font-family:Montserrat,Inter,Arial,sans-serif}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+.container{width:min(1240px,92%);margin:auto}
+
+/* Header — matched to the supplied design */
+.header{height:88px;background:#031126;color:#fff;border-bottom:1px solid rgba(35,215,255,.25);position:sticky;top:0;z-index:50}
+.nav{height:100%;display:flex;align-items:center;justify-content:space-between}
+.logo{width:240px;height:52px;object-fit:contain;object-position:left center}
+.navlinks{display:flex;align-items:center;gap:34px;font-size:14px;color:#e5eef8}
+.navlinks a{padding:32px 0;position:relative}
+.navlinks a.active,.navlinks a:hover{color:var(--cyan)}
+.navlinks a.active:after{content:"";position:absolute;left:0;right:0;bottom:18px;height:3px;background:var(--cyan);border-radius:4px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:8px;padding:14px 22px;font-size:14px;font-weight:800;background:linear-gradient(90deg,#00a5ff,#20c8f8);color:#fff;box-shadow:0 8px 25px rgba(0,160,255,.24)}
+.btn.outline{background:transparent;border:2px solid #05aaf7;color:#fff;box-shadow:none}
+
+/* Hero */
+.hero{background:#031126;color:#fff}
+.hero-grid{display:grid;grid-template-columns:49% 51%;min-height:515px}
+.hero-copy{padding:72px 35px 65px 0;display:flex;flex-direction:column;justify-content:center}
+.eyebrow{font-size:13px;letter-spacing:.24em;font-weight:800;color:#08b9fa}
+h1{font-size:56px;line-height:1.02;letter-spacing:-.045em;margin:14px 0 20px;font-weight:800}
+h1 span{color:#11c8ff}
+.hero-copy p{font-size:17px;line-height:1.55;color:#d1deeb;max-width:570px;margin:0}
+.actions{display:flex;gap:16px;margin-top:28px}
+.hero-art{position:relative;min-height:515px;overflow:hidden;background:#071a35}
+.hero-art:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,17,38,.05),rgba(3,17,38,.25))}
+.hero-art img{width:100%;height:100%;object-fit:cover;object-position:center}
+.hero-badge{position:absolute;right:14%;top:34%;width:95px;height:95px;border-radius:50%;background:radial-gradient(circle,#fff 0 3%,#21d7ff 7%,rgba(33,215,255,.22) 28%,transparent 70%);box-shadow:0 0 75px rgba(33,215,255,.9)}
+.hero-mark{position:absolute;right:13%;top:31%;font-size:100px;line-height:1;color:#fff;font-weight:900;text-shadow:0 0 20px rgba(33,215,255,.55)}
+
+/* Solutions */
+.solutions{padding:46px 0 50px;background:#fff}
+.section-kicker{color:#007fe4;font-size:12px;font-weight:800;letter-spacing:.22em}
+.solution-grid{display:grid;grid-template-columns:repeat(4,1fr);margin-top:25px}
+.solution{padding:5px 34px 8px;border-right:1px solid #dbe5ee}
+.solution:first-child{padding-left:0}
+.solution:last-child{border-right:0}
+.solution-icon{width:55px;height:55px;border-radius:50%;display:grid;place-items:center;background:#dff6ff;color:#007fe4;font-size:25px;margin-bottom:15px}
+.solution h3{font-size:17px;margin:0 0 8px;color:#0a2544}
+.solution p{font-size:13px;line-height:1.45;color:#61738a;margin:0}
+
+/* Stats band */
+.stats{background:#031126;color:#fff;background-image:linear-gradient(90deg,rgba(3,17,38,.96),rgba(3,17,38,.84)),url('assets/mountains.jpg');background-size:cover;background-position:center}
+.stats-inner{display:grid;grid-template-columns:1.25fr 1fr 1fr 1fr;min-height:190px;align-items:center}
+.stats-intro{padding-right:35px}
+.stats-intro h4{margin:0 0 8px;color:#08c7ff;font-size:12px;letter-spacing:.16em}
+.stats-intro p{margin:0;color:#c4d1df;font-size:13px;line-height:1.45}
+.stats-intro .btn{margin-top:14px;padding:10px 16px;font-size:11px}
+.stat{height:92px;display:flex;flex-direction:column;justify-content:center;text-align:center;border-left:1px solid rgba(255,255,255,.2)}
+.stat strong{font-size:36px;color:#0dc5ff;line-height:1}
+.stat span{font-size:11px;color:#dce6f0;margin-top:7px}
+
+/* Advantage */
+.advantage{padding:0;background:#fff}
+.adv-grid{display:grid;grid-template-columns:46% 54%;min-height:350px}
+.adv-image{background:url('assets/office.jpg') center/cover no-repeat;min-height:350px}
+.adv-copy{padding:50px 70px;background:#f6faff}
+.adv-copy .small{font-size:10px;letter-spacing:.2em;font-weight:800;color:#008be9}
+.adv-copy h2{font-size:34px;line-height:1.08;margin:10px 0 12px;color:#08274a}
+.adv-copy p{font-size:14px;color:#6a7d91;max-width:600px}
+.checks{padding:0;margin:18px 0;list-style:none;color:#597087;font-size:13px}
+.checks li{margin:9px 0}.checks li:before{content:"✓";display:inline-grid;place-items:center;width:18px;height:18px;margin-right:8px;border-radius:50%;background:#18b9fa;color:#fff;font-size:11px}
+
+/* Mobile product */
+.platform{padding:70px 0}
+.platform-grid{display:grid;grid-template-columns:1fr 360px;gap:35px;align-items:center}
+.dashboard{background:#061a36;border-radius:18px;padding:28px;color:#fff;box-shadow:var(--shadow)}
+.dashboard-top{display:flex;justify-content:space-between;align-items:center}
+.dashboard h3{margin:0;font-size:22px}.period{font-size:11px;color:#a8bad0;border:1px solid rgba(255,255,255,.14);padding:7px 10px;border-radius:7px}
+.chart{height:240px;margin-top:20px;border-radius:12px;background:linear-gradient(180deg,rgba(0,163,255,.15),rgba(0,0,0,0));position:relative;overflow:hidden}
+.chart svg{position:absolute;inset:0;width:100%;height:100%}
+.metric-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+.metric{padding:14px;background:#0b2b54;border-radius:9px}.metric strong{display:block;color:#20d1ff;font-size:20px}.metric span{font-size:10px;color:#b9c9d9}
+.phone{background:#020c1b;border:9px solid #111d2d;border-radius:38px;padding:9px;box-shadow:0 24px 60px rgba(0,0,0,.3)}
+.phone-screen{border-radius:27px;overflow:hidden;background:#061a35;color:#fff}
+.phone-head{padding:20px 18px 14px}.phone-head .brandline{font-size:10px;color:#23d7ff;letter-spacing:.15em;font-weight:800}
+.phone-head h3{font-size:23px;line-height:1.08;margin:13px 0}.phone-head p{font-size:11px;color:#b8c7d8}
+.phone-screen .btn{width:100%;padding:12px;font-size:12px}
+.app-list{padding:16px;background:#fff;color:#09203d}
+.app-list h5{margin:0 0 12px;color:#008be9;font-size:9px;letter-spacing:.18em}
+.app-item{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid #e4edf5}
+.app-item:last-child{border:0}.app-dot{width:34px;height:34px;border-radius:50%;background:#dff7ff;color:#008be9;display:grid;place-items:center}.app-item strong{font-size:11px;display:block}.app-item small{font-size:9px;color:#75869a}
+
+/* Footer */
+.footer{background:#031126;color:#fff;padding:32px 0 25px}
+.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.footer-logo{width:210px}.footer-links{display:flex;gap:25px;font-size:11px;color:#d5e1ed}.footer-note{font-size:9px;color:#6f849b}
+.mobile-menu{display:none}
+
+@media(max-width:900px){
+  .navlinks{display:none}.mobile-menu{display:block;color:#fff;font-size:24px}
+  .hero-grid,.adv-grid,.platform-grid{grid-template-columns:1fr}
+  .hero-copy{padding:58px 0}.hero-art{min-height:390px}
+  .solution-grid{grid-template-columns:1fr 1fr}.solution{padding:25px;border-bottom:1px solid #dbe5ee}
+  .stats-inner{grid-template-columns:1fr 1fr;padding:30px 0}.stats-intro{grid-column:1/-1;padding:0 0 20px}.stat{border-top:1px solid rgba(255,255,255,.2)}
+  .adv-image{min-height:300px}.adv-copy{padding:45px 7%}
+}
+@media(max-width:600px){
+  .header{height:72px}.logo{width:190px}.header .btn{display:none}
+  h1{font-size:43px}.hero-grid{min-height:0}.hero-art{min-height:300px}
+  .solution-grid{grid-template-columns:1fr}.solution,.solution:first-child{padding:25px 0}
+  .stats-inner{grid-template-columns:1fr}.stat{border-left:0;border-top:1px solid rgba(255,255,255,.2)}
+  .metric-row{grid-template-columns:1fr}.footer-inner{flex-direction:column;align-items:flex-start}
+  .footer-links{flex-wrap:wrap}
+}
 </style>
 </head>
 <body>
-<nav><div class="container nav">
-<a class="brand" href="#">
-<img src="assets/beacon-logo-primary.png" alt="Beacon Technology" style="display:block;width:235px;height:auto;max-height:52px;object-fit:contain;object-position:left center"></a>
-<div class="links"><a href="#solutions">Solutions</a><a href="#platform">Platform</a><a href="#about">About</a><a href="#contact">Contact</a></div>
-<a class="btn" href="#contact">Get Started →</a>
-</div></nav>
+<header class="header">
+  <div class="container nav">
+    <a href="#"><img class="logo" src="assets/beacon-logo-primary.png" alt="Beacon Technology"></a>
+    <nav class="navlinks">
+      <a class="active" href="#">Home</a><a href="#solutions">Solutions</a><a href="#about">About</a><a href="#platform">Case Studies</a><a href="#platform">Blog</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="btn" href="#contact">Get Started →</a>
+    <div class="mobile-menu">☰</div>
+  </div>
+</header>
 
-<header class="hero"><div class="container" style="display:contents">
-<div class="container" style="padding-left:4%;padding-right:0">
-<div class="eyebrow">AI BUSINESS SOLUTIONS</div>
-<h1>Smarter Tools.<br>Stronger Businesses.<br><span>Powered by AI.</span></h1>
-<p class="lead">Beacon Technology helps businesses work smarter, move faster, and achieve more with practical AI solutions, intelligent automation, and modern technology.</p>
-<div class="actions"><a class="btn" href="#contact">Get Started →</a><a class="btn secondary" href="#solutions">Explore Solutions</a></div>
-</div>
-<div class="visual"><div class="grid"></div><div class="beam"></div><div class="orb"></div>
-<div style="position:absolute;right:20%;top:150px;font-size:100px;font-weight:900;color:#f8fafc;opacity:.92">B</div>
-<div class="panel"><strong>Beacon AI Platform</strong><div style="color:#aebccd;font-size:12px;margin-top:4px">Automate. Analyze. Optimize.</div><div class="mini"><div><b>42%</b>Revenue growth</div><div><b>1,248</b>Tasks automated</div><div><b>186h</b>Time saved</div></div></div>
-</div></div></header>
-
-<section id="solutions"><div class="container"><div class="section-head"><div class="eyebrow">OUR AI SOLUTIONS</div><h2>Technology that works for you.</h2><p>Purpose-built solutions that turn repetitive work, scattered information, and manual processes into streamlined business systems.</p></div>
-<div class="cards">
-<div class="card"><div class="icon">✦</div><h3>AI Automation</h3><p>Streamline processes and eliminate repetitive work with intelligent workflows.</p></div>
-<div class="card"><div class="icon">↗</div><h3>Business Intelligence</h3><p>Turn your data into clearer decisions with dashboards and actionable insights.</p></div>
-<div class="card"><div class="icon">☁</div><h3>Cloud Solutions</h3><p>Secure, scalable technology designed to support your business as it grows.</p></div>
-<div class="card"><div class="icon">◇</div><h3>Custom AI Development</h3><p>Tailored solutions built around your goals, systems, and unique workflow.</p></div>
-</div></div></section>
-
-<section class="stats"><div class="container statgrid"><div class="stat"><b>200+</b><span>Businesses Served</span></div><div class="stat"><b>98%</b><span>Client Satisfaction</span></div><div class="stat"><b>3×</b><span>Average Efficiency Gain</span></div></div></section>
-
-
-<section>
-  <div class="container">
-    <div class="section-head">
-      <div class="eyebrow">THE BEACON BRAND</div>
-      <h2>A consistent identity across every screen.</h2>
-      <p>Logo, app icon, and visual system are loaded from the same branded asset library.</p>
+<main>
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <div class="eyebrow">AI BUSINESS SOLUTIONS</div>
+      <h1>Smarter Tools.<br>Stronger Businesses.<br><span>Powered by AI.</span></h1>
+      <p>Beacon Technology helps businesses work smarter, move faster, and achieve more with custom AI solutions, intelligent automation, and modern technology.</p>
+      <div class="actions"><a class="btn" href="#contact">Get Started →</a><a class="btn outline" href="#solutions">Explore Solutions</a></div>
     </div>
-    <div style="display:grid;grid-template-columns:1.3fr .7fr;gap:18px">
-      <div class="card" style="min-height:260px;display:flex;align-items:center;justify-content:center;background:#051227">
-        <img src="assets/beacon-logo-primary.png" alt="Beacon Technology primary logo" style="max-width:90%;width:600px;height:auto">
+    <div class="hero-art">
+      <img src="assets/hero-ai.jpg" alt="AI technology concept">
+      <div class="hero-badge"></div><div class="hero-mark">B</div>
+    </div>
+  </div>
+</section>
+
+<section id="solutions" class="solutions">
+  <div class="container">
+    <div class="section-kicker">OUR AI SOLUTIONS</div>
+    <div class="solution-grid">
+      <article class="solution"><div class="solution-icon">✦</div><h3>AI Automation</h3><p>Streamline processes and eliminate repetitive work.</p></article>
+      <article class="solution"><div class="solution-icon">▥</div><h3>Business Intelligence</h3><p>Turn your data into smarter decisions.</p></article>
+      <article class="solution"><div class="solution-icon">☁</div><h3>Cloud Solutions</h3><p>Scalable, secure, and built for growth.</p></article>
+      <article class="solution"><div class="solution-icon">◇</div><h3>Custom AI Development</h3><p>Tailored solutions for your unique needs.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="container stats-inner">
+    <div class="stats-intro"><h4>TRUSTED BY INNOVATIVE BUSINESSES</h4><p>From startups to established enterprises, Beacon Technology delivers real solutions that create measurable results.</p><a class="btn" href="#platform">Our Success Stories →</a></div>
+    <div class="stat"><strong>200+</strong><span>Businesses Served</span></div>
+    <div class="stat"><strong>98%</strong><span>Client Satisfaction</span></div>
+    <div class="stat"><strong>3×</strong><span>Average Efficiency Gain</span></div>
+  </div>
+</section>
+
+<section id="about" class="advantage">
+  <div class="container adv-grid">
+    <div class="adv-image" aria-label="Modern business office"></div>
+    <div class="adv-copy"><div class="small">THE BEACON ADVANTAGE</div><h2>Technology That<br>Works for You</h2><p>We don't just build technology — we build solutions that help your business grow. With Beacon Technology, you get a partner committed to your success.</p>
+      <ul class="checks"><li>Expert team of AI & technology specialists</li><li>Flexible, scalable solutions</li><li>Ongoing support & optimization</li></ul>
+      <a class="btn" href="#contact">Let's Build Together →</a>
+    </div>
+  </div>
+</section>
+
+<section id="platform" class="platform">
+  <div class="container platform-grid">
+    <div>
+      <div class="section-kicker">BEACON PLATFORM</div>
+      <h2 style="font-size:42px;line-height:1.05;margin:10px 0 12px">A clearer view of your business.</h2>
+      <p style="color:var(--muted);max-width:600px">A connected digital experience for monitoring performance, automating work, and keeping your team focused.</p>
+      <div class="dashboard">
+        <div class="dashboard-top"><h3>Business Overview</h3><span class="period">Last 30 days</span></div>
+        <div class="chart">
+          <svg viewBox="0 0 800 240" preserveAspectRatio="none"><polyline points="0,195 90,170 160,180 240,130 315,150 390,92 470,115 545,65 630,86 710,35 800,55" fill="none" stroke="#21d7ff" stroke-width="4"/><polyline points="0,205 90,185 160,194 240,145 315,164 390,108 470,130 545,80 630,100 710,50 800,70" fill="none" stroke="#078ff0" stroke-width="12" opacity=".15"/></svg>
+        </div>
+        <div class="metric-row"><div class="metric"><strong>+42%</strong><span>Revenue growth</span></div><div class="metric"><strong>1,248</strong><span>Tasks automated</span></div><div class="metric"><strong>186h</strong><span>Time saved</span></div></div>
       </div>
-      <div class="card" style="min-height:260px;display:flex;align-items:center;justify-content:center;background:#081c3a">
-        <img src="assets/beacon-icon.png" alt="Beacon Technology app icon" style="width:145px;height:145px;object-fit:cover;border-radius:28px">
+    </div>
+    <div class="phone">
+      <div class="phone-screen">
+        <div class="phone-head"><div class="brandline">BEACON TECHNOLOGY</div><h3>Smarter Tools.<br>Stronger Businesses.<br><span style="color:#22d7ff">Powered by AI.</span></h3><p>Custom AI solutions, automation, and modern technology to help your business grow.</p><a class="btn" href="#contact">Get Started →</a></div>
+        <div class="app-list"><h5>OUR SOLUTIONS</h5><div class="app-item"><div class="app-dot">✦</div><div><strong>AI Automation</strong><small>Save time. Increase output.</small></div></div><div class="app-item"><div class="app-dot">▥</div><div><strong>Business Intelligence</strong><small>Make better decisions.</small></div></div><div class="app-item"><div class="app-dot">☁</div><div><strong>Cloud Solutions</strong><small>Secure. Scalable. Grow.</small></div></div><div class="app-item"><div class="app-dot">◇</div><div><strong>Custom AI Development</strong><small>Built for your goals.</small></div></div></div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="platform"><div class="container"><div class="section-head"><div class="eyebrow">BEACON PLATFORM</div><h2>One intelligent view of your business.</h2><p>A connected digital experience for monitoring performance, automating work, and keeping your team focused.</p></div>
-<div class="dashboard"><div class="dash"><h3>Business Overview</h3><p style="color:var(--muted);font-size:13px">Last 30 days</p><div class="chart"></div><div class="mini" style="margin-top:16px"><div><b>+42%</b>Revenue growth</div><div><b>1,248</b>Tasks automated</div><div><b>186h</b>Time saved</div></div></div>
-<div class="phone"><div class="phone-screen"><div class="eyebrow">BEACON TECHNOLOGY</div><h3 style="font-size:27px;margin:14px 0">Your AI-Powered Business Assistant</h3><p style="color:var(--muted);font-size:13px">Smarter decisions. Higher productivity. Real results.</p><a class="btn" href="#contact">Open AI Tools →</a><div class="app-row"><div>⚙<br>Automation</div><div>▥<br>Analytics</div><div>☁<br>Cloud</div><div>◷<br>Support</div></div></div></div></div></div></section>
+<section id="contact" style="padding:0 0 80px"><div class="container" style="background:#f5f9fd;border:1px solid #dbe7f0;border-radius:18px;padding:50px;text-align:center"><div class="section-kicker">READY WHEN YOU ARE</div><h2 style="font-size:40px;margin:10px 0">Let's build what's next.</h2><p style="color:var(--muted);margin:0 auto 22px;max-width:620px">Bring us the challenge. We'll help identify where AI, automation, and modern technology can create leverage.</p><a class="btn" href="mailto:hello@beacontechnology.ai">Start a Conversation →</a></div></section>
+</main>
 
-<section id="about"><div class="container"><div class="cta"><div><div class="eyebrow">THE BEACON ADVANTAGE</div><h2>Let's build what's next.</h2><p>Practical AI. Clear strategy. Technology that moves your business forward.</p></div><a class="btn" href="#contact">Start a Conversation →</a></div></div></section>
-
-<section id="contact"><div class="container"><div class="section-head"><div class="eyebrow">READY WHEN YOU ARE</div><h2>Bring us the challenge.</h2><p>Beacon Technology can help you identify opportunities to automate, integrate, and optimize.</p></div>
-<a class="btn" href="mailto:hello@beacontechnology.ai">hello@beacontechnology.ai →</a></div></section>
-
-<footer><div class="container footer"><div><strong style="color:white">BEACON TECHNOLOGY</strong><br>AI BUSINESS SOLUTIONS</div><div>Smarter Tools. Stronger Businesses. Powered by AI.</div><div>© 2026 Beacon Technology</div></div></footer>
+<footer class="footer">
+  <div class="container footer-inner">
+    <img class="footer-logo" src="assets/beacon-logo-primary.png" alt="Beacon Technology">
+    <div class="footer-links"><a href="#">Home</a><a href="#solutions">Solutions</a><a href="#about">About</a><a href="#platform">Case Studies</a><a href="#contact">Contact</a></div>
+    <div class="footer-note">Smarter Tools. Stronger Businesses. Powered by AI.</div>
+  </div>
+</footer>
 </body>
 </html>
