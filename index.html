@@ -7,8 +7,8 @@
 <meta name="description" content="Beacon Technology — Smarter Tools. Stronger Businesses. Powered by AI.">
 <style>
 :root{
- --navy:#051227; --navy2:#081c3a; --blue:#0096ff; --cyan:#1fd3ff;
- --white:#f8fafc; --muted:#aebccd; --line:rgba(31,211,255,.20);
+  --navy:#051227; --navy2:#081c3a; --blue:#0096ff; --cyan:#1fd3ff;
+  --white:#f8fafc; --muted:#aebccd; --line:rgba(31,211,255,.20);
 }
 *{box-sizing:border-box} html{scroll-behavior:smooth}
 body{margin:0;background:var(--navy);color:var(--white);font-family:Inter,Montserrat,Arial,sans-serif;line-height:1.5}
@@ -44,14 +44,15 @@ section{padding:95px 0}.section-head{max-width:720px;margin-bottom:42px}.section
 .cta{background:radial-gradient(circle at 80% 20%,rgba(31,211,255,.18),transparent 30%),#071a35;border:1px solid var(--line);border-radius:24px;padding:60px;display:flex;align-items:center;justify-content:space-between;gap:30px}.cta h2{font-size:40px;line-height:1.05;margin:0 0 12px}.cta p{color:var(--muted);margin:0}
 footer{padding:45px 0;color:#93a8bd;border-top:1px solid var(--line);margin-top:80px;font-size:13px}.footer{display:flex;justify-content:space-between;gap:20px}
 @media(max-width:900px){.links{display:none}.hero,.dashboard{grid-template-columns:1fr}.hero{padding:70px 0}.visual{height:420px}.cards{grid-template-columns:1fr 1fr}.statgrid{grid-template-columns:1fr}.stat{border-right:0;border-bottom:1px solid var(--line)}.cta{padding:35px;display:block}.cta .btn{margin-top:25px}}
-@media(max-width:560px){h1{font-size:48px}.cards{grid-template-columns:1fr}.visual{height:360px}.panel{width:82%;left:18px}.mini{grid-template-columns:1fr}.mini div:nth-child(n+2){display:none}}
+@media(max-width:560px){
+  .brand img{max-width:185px!important}
+h1{font-size:48px}.cards{grid-template-columns:1fr}.visual{height:360px}.panel{width:82%;left:18px}.mini{grid-template-columns:1fr}.mini div:nth-child(n+2){display:none}}
 </style>
 </head>
 <body>
 <nav><div class="container nav">
 <a class="brand" href="#">
-<span class="mark"><svg viewBox="0 0 100 100" aria-hidden="true"><path fill="#f8fafc" d="M20 82V26h24c19 0 30 9 30 24S63 74 44 74H34v8H20zm14-22h9c10 0 16-4 16-10s-6-10-16-10h-9v20z"/><path fill="#1fd3ff" d="M52 43l35-17v14L60 51zM52 54l35-5v14L60 59z"/></svg></span>
-<span>BEACON<br><small>TECHNOLOGY</small></span></a>
+<img src="assets/beacon-logo-primary.png" alt="Beacon Technology" style="display:block;width:235px;height:auto;max-height:52px;object-fit:contain;object-position:left center"></a>
 <div class="links"><a href="#solutions">Solutions</a><a href="#platform">Platform</a><a href="#about">About</a><a href="#contact">Contact</a></div>
 <a class="btn" href="#contact">Get Started →</a>
 </div></nav>
@@ -77,6 +78,25 @@ footer{padding:45px 0;color:#93a8bd;border-top:1px solid var(--line);margin-top:
 </div></div></section>
 
 <section class="stats"><div class="container statgrid"><div class="stat"><b>200+</b><span>Businesses Served</span></div><div class="stat"><b>98%</b><span>Client Satisfaction</span></div><div class="stat"><b>3×</b><span>Average Efficiency Gain</span></div></div></section>
+
+
+<section>
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">THE BEACON BRAND</div>
+      <h2>A consistent identity across every screen.</h2>
+      <p>Logo, app icon, and visual system are loaded from the same branded asset library.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:1.3fr .7fr;gap:18px">
+      <div class="card" style="min-height:260px;display:flex;align-items:center;justify-content:center;background:#051227">
+        <img src="assets/beacon-logo-primary.png" alt="Beacon Technology primary logo" style="max-width:90%;width:600px;height:auto">
+      </div>
+      <div class="card" style="min-height:260px;display:flex;align-items:center;justify-content:center;background:#081c3a">
+        <img src="assets/beacon-icon.png" alt="Beacon Technology app icon" style="width:145px;height:145px;object-fit:cover;border-radius:28px">
+      </div>
+    </div>
+  </div>
+</section>
 
 <section id="platform"><div class="container"><div class="section-head"><div class="eyebrow">BEACON PLATFORM</div><h2>One intelligent view of your business.</h2><p>A connected digital experience for monitoring performance, automating work, and keeping your team focused.</p></div>
 <div class="dashboard"><div class="dash"><h3>Business Overview</h3><p style="color:var(--muted);font-size:13px">Last 30 days</p><div class="chart"></div><div class="mini" style="margin-top:16px"><div><b>+42%</b>Revenue growth</div><div><b>1,248</b>Tasks automated</div><div><b>186h</b>Time saved</div></div></div>
